@@ -139,6 +139,6 @@ const _run = async () => {
   }
 };
 
-const job = schedule.scheduleJob('35 * * * *', function () {
+const job = schedule.scheduleJob('40 * * * *', function () {
   _run();
 });
