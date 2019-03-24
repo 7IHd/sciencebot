@@ -135,4 +135,4 @@ const _run = async () => {
   }
 };
 
-run();
+_run();
