@@ -5,11 +5,8 @@ const fs = require('fs'),
   axios = require('axios'),
   argv = require('minimist')(process.argv.slice(2)),
   mapObjIndexed = require('ramda/src/mapObjIndexed'),
-  keys = require('ramda/src/keys'),
   values = require('ramda/src/values'),
   omit = require('ramda/src/omit'),
-  compose = require('ramda/src/compose'),
-  moment = require('moment'),
   randomwords = require('random-words'),
   schedule = require('node-schedule');
 
@@ -139,6 +136,6 @@ const _run = async () => {
   }
 };
 
-const job = schedule.scheduleJob('40 * * * *', function () {
+schedule.scheduleJob('58 * * * *', function () {
   _run();
 });
