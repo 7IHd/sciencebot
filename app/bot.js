@@ -7,8 +7,7 @@ const fs = require('fs'),
   mapObjIndexed = require('ramda/src/mapObjIndexed'),
   values = require('ramda/src/values'),
   omit = require('ramda/src/omit'),
-  randomwords = require('random-words'),
-  schedule = require('node-schedule');
+  randomwords = require('random-words');
 
 const readFile = util.promisify(fs.readFile);
 // const writeFile = util.promisify(fs.writeFile);
@@ -136,6 +135,4 @@ const _run = async () => {
   }
 };
 
-schedule.scheduleJob('15 * * * *', function () {
-  _run();
-});
+run();
