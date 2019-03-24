@@ -4,12 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint app",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
+    "validate": "npm run lint && npm run prettier -- --check"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
+    "minimist": "^1.2.0",
+    "moment": "^2.24.0",
     "node-twitterbot": "^0.2.2",
+    "ramda": "^0.26.1",
+    "random-words": "^1.1.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "twit": "^2.2.11"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "prettier": "^1.16.4"
   }
 }
